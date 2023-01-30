@@ -1,0 +1,246 @@
+/* reset */
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* estilos generales */
+body{
+    background-image: url(https://img.freepik.com/premium-photo/flat-lay-cosmetic-accessories_43535-231.jpg?w=1060);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+/* estilos de header */
+
+header{
+    background-color: rgb(226, 82, 255);
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+header nav ul li{
+    background-color: rgb(132, 0, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 30px; 
+}
+
+/*estilos de main */
+
+main{
+    padding: 20px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    padding: 1.5em;
+}
+
+section{
+        padding: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 50px;
+}
+section div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+section div img{
+    justify-content: center;
+    width: 40%;}
+
+
+/* estilos de footer */
+
+footer{
+    text-align: center ;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    
+}
+
+/* estilo de form*/
+
+form{
+    padding: 30px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* estilo de tienda*/
+
+.tienda {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
+
+/* estilo de contenedor*/ 
+
+.contenedor {
+    gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+.Curso {
+    background-color: rgb(199, 0, 199);
+}
+
+.Siguenos{
+    position: fixed;
+    left: 10px;
+    bottom: 5px;
+    z-index: 1;
+}
+
+.Ubicanos{  
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    z-index: 1;
+}
+.div{
+    display: flex;
+}
+main h2{
+    margin: 1rem;
+}
+main h2 span{
+    display: block;
+}
+main img{
+    width: 30%;
+}
+
+
+
+@media screen and (min-width:600px){
+    /* estilos de header*/
+    header{
+        display: block;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.7rem;
+        align-items: center;
+
+    }
+
+    header nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    header nav ul li{
+        font-weight: bold;
+    }
+
+    /* estilos de section*/
+
+    section{
+        display: block;
+        display: flex;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        animation-name: animacion-div;
+        animation-iteration-count: infinite;
+        animation-duration: 30s;
+    }
+
+
+        @keyframes animacion-div{
+            0%{
+                transform: scale(0.5);
+                background-color: rgb(255, 255, 255);
+            }
+    
+            35%{
+                transform: scale(0.8);
+                background-color: rgb(245, 125, 245);
+            }
+    
+            60%{
+                transform: scale(1.0);
+                background-color: rgb(219, 2, 190);
+            }
+        }
+        
+    section div img{
+        width: 40%;}
+
+/*estilos de pantallas de escritorio */
+
+@media screen and (min-width:1024px){
+    
+    /*estilos de main*/
+
+    header nav ul li{
+        transition: 3s;
+    }
+    header nav ul li:hover{
+        transform: scale(0.9);
+        transition: 3s;
+        box-shadow: 1px 1px 2px black;
+    }
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        grid-template-areas: 
+            "p img"
+            "h2 img"
+            "p-dos img"
+        justify-content: center;
+        justify-items: center;
+
+    }
+    main h2{
+        grid-area: h2;
+    }
+
+    main img{
+        grid-area: img;
+        justify-content: center;
+    }
+    
+    main img:hover{
+        filter: drop-shadow(10px 10px 10px rgb(128, 68, 68));
+    }
