@@ -1,0 +1,184 @@
+@import"../base/variable";
+@import"../base/mixin";
+@import"../base/listas";
+@import"../base/extend";
+
+body{
+    background-image: url(https://img.freepik.com/premium-photo/flat-lay-cosmetic-accessories_43535-231.jpg?w=1060);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+header{
+    background-color: nth($colores , 2);
+    nav{
+        ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: $medida-secundaria;
+        li{
+            background-color: nth($colores , 3);
+            @extend %botones
+            
+        }}
+    }}
+    main{
+        @include flex;
+        padding: 20px;
+        height: $medida-principal;
+        gap: $medida-secundaria;
+        padding: 1.5em;
+        h2{
+            margin: 1rem;
+            span{display: block;}
+        }
+        .boton{
+            background-color: nth($colores, 7);
+            margin-top: 1rem;
+            padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+            color: whitesmoke;
+            box-shadow: 3px 3px 10px black;
+        }
+        img{width: 60%;}}
+
+    section{
+        display: none;
+    }
+    
+    footer{
+        position: fixed;
+        right: $medida-terciaria;
+        bottom: $medida-terciaria;
+        z-index: 1;
+    }
+    form{
+        @include flex;
+        padding: $medida-principal;
+        height: $medida-principal;
+        gap: $medida-secundaria;
+    }
+    .tienda {
+        @extend %final
+    }
+    .contenedor {
+        @include flex;
+        gap: 100px;
+        padding: $medida-principal;
+        height: $medida-principal;
+        
+    }
+    .boton-compra{
+        background-color: nth($colores , 8);
+        @extend %botones
+    }
+    .boton-carrito{
+        background-color: nth($colores , 3);
+        @extend %botones
+    }
+    .cuerpo-tarjeta{
+        background-color: nth($colores, 2);
+    }
+    .Curso {
+        @include flex;
+    }
+    
+    .Siguenos{
+    @extend %final
+    }
+    
+    .Ubicanos{  
+       @extend %finalderecho
+    }
+    .div{
+        display: flex;
+    }
+    main h2{
+        margin: 1rem;
+    }
+    main h2 span{
+        display: block;
+    }
+    main img{
+        width: 30%;
+    }
+    @media screen and (min-width:$medida-tablet) {
+        header{
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding: 0.7rem;
+            align-items: center;
+            nav{
+                ul{display: flex;
+                    list-style: none;
+                    gap: 1rem;
+                li{
+                    font-weight: bold;
+                }}
+            }
+        }
+        section{
+            @include flex;
+            height: 700px;
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center ;
+                text-align: center;
+                animation-name: animacion-div;
+                animation-iteration-count: infinite;
+                animation-duration: 30s;
+                
+        img{
+            width: 20%;
+        }
+            }
+        }
+        @keyframes animacion-div{
+            0%{
+                transform: scale(0.5);
+                background-color: nth($colores, 7);
+            }
+    
+            35%{
+                transform: scale(0.8);
+                background-color: nth($colores, 6);
+            }
+    
+            60%{
+                transform: scale(1.0);
+                background-color: nth($colores, 5);
+            }
+        }
+        @media screen and (min-width:$medida-ordenador){
+            header{
+                nav{
+                    ul{
+                        li{transition: 3s;
+                        :hover{
+                            transform: scale(0.9);
+                            transition: 3s;
+                            box-shadow: 1px 1px 2px black;
+                        }
+                        }
+                    }
+                }
+            }
+            main{
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-template-areas: 
+            "p img"
+            "h2 img"
+            "p-dos img";
+            justify-content: center;
+            justify-items: center;
+        }   
+        }
+    }

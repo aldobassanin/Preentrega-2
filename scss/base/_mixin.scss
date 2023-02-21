@@ -1,0 +1,11 @@
+//mixins
+
+//mixin sin parametros
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;        
+    text-align: center;
+}
