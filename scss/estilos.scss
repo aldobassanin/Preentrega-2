@@ -8,6 +8,10 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    position: relative;
+    padding-bottom: 3em;
+    margin: 0;
+    min-height: 100vh;
 
 }
 header{
@@ -46,28 +50,40 @@ header{
     section{
         display: none;
     }
-    
-    footer{
-        position: fixed;
-        right: $medida-terciaria;
-        bottom: $medida-terciaria;
-        z-index: 1;
-    }
     form{
         @include flex;
         padding: $medida-principal;
         height: $medida-principal;
         gap: $medida-secundaria;
     }
+    
+    footer{
+        display: none;
+    }
     .tienda {
         @extend %final
+    }
+    .maquilla{
+        width: 19rem
+    }
+    .imgmaq{
+        width: 18rem;
+        height: 400px;
     }
     .contenedor {
         @include flex;
         gap: 100px;
         padding: $medida-principal;
         height: $medida-principal;
-        
+        text-align: center;
+    }
+    .imagen-tienda{
+        width: 100px;
+        height: 100px;
+    }
+    .Valentina{
+        width: 250px;
+        height: 300px;
     }
     .boton-compra{
         background-color: nth($colores , 8);
